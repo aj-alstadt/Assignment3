@@ -16,8 +16,25 @@
 def main():
     print("\nWelcome to the VGRS (Video Game Rating System).\n\n"
           "The VGRS will allow you to rate the video games you’ve played, "
-          "and then\ndisplay the list of games and their corresponding ratings,"
+          "and then display the \nlist of games and their corresponding ratings,"
           " as well as some statistics.")
+
+    #Declaring variables
+    titles = []
+    scores = []
+    totals = 0.00
+
+    #Adds the scores together to get the average later
+    for i in range(len(scores)):
+        totals += scores[i]
+
+    average = totals / len(scores)
+
+    while more == "y":
+
+        title = input("\nPlease enter the name of a game, or type 'done' to finish: ")
+        score =
+
 
 
 
