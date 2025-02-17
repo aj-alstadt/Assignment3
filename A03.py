@@ -25,9 +25,6 @@ def main():
     scores = []
     totals = 0.00
     more = "y"
-    #Setting the min and max scores to the 1st cell so I can change them later
-    lowest = scores[0]
-    highest = scores[0]
 
     while more.lower() == "y":
 
@@ -44,6 +41,7 @@ def main():
                 #convert score to float
                 score = float(score_input)
 
+
                 # Error handling
                 if 1.00 <= score <= 10.00:
                     break
@@ -56,17 +54,34 @@ def main():
 
         more = input("Would you like to enter another title? (Y/N): ")
 
+
+
+
+
     # Adds the scores together to get the average later
     for i in range(len(scores)):
         totals += scores[i]
 
     average = totals / len(scores)
 
+    #Update highest and lowest scores
+    highest = max(scores)
+    lowest = min(scores)
+
+    #Attach highest and lowest rated games to their scores
+    highestindex = scores.index(highest)
+    lowestindex = scores.index(lowest)
+    highestgame = titles[highestindex]
+    lowestgame = titles[lowestindex]
+
+
 
     print("\nHere is the summary of your ratings:")
     print(f"Games: {titles}")
     print(f"Scores: {scores}")
     print(f"Average Rating: {average:.2f}")
+    print(f"Highest Rated Game: {highestgame} ({highest:.2f})")
+    print(f"Lowest Rated Game: {lowestgame} ({lowest:.2f})")
 
 
 main()
