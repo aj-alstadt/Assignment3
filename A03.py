@@ -11,3 +11,21 @@
 #
 # Notes:            Created in Pycharm, version control with Git
 #*****************************************************************************
+
+
+def main():
+    print("\nWelcome to the VGRS (Video Game Rating System).\n\n"
+          "The VGRS will allow you to rate the video games you’ve played, "
+          "and then\ndisplay the list of games and their corresponding ratings,"
+          " as well as some statistics.")
+
+
+
+
+
+
+
+
+
+
+main()
