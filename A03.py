@@ -23,17 +23,27 @@ def main():
     titles = []
     scores = []
     totals = 0.00
+    more = "y"
 
-    #Adds the scores together to get the average later
-    for i in range(len(scores)):
-        totals += scores[i]
-
-    average = totals / len(scores)
 
     while more == "y":
 
         title = input("\nPlease enter the name of a game, or type 'done' to finish: ")
-        score =
+        titles.append(title)
+
+        score = input("\nPlease rate the game from 1.00-10.00: ")
+        scores.append(score)
+
+        more = input("Would you like to enter another title? (Y/N): ")
+
+
+    #Adds the scores together to get the average later
+    for i in range(len(scores)):
+       totals += scores[i]
+
+    average = totals / len(scores)
+
+
 
 
 
