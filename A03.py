@@ -83,5 +83,8 @@ def main():
     print(f"Highest Rated Game: {highestgame} ({highest:.2f})")
     print(f"Lowest Rated Game: {lowestgame} ({lowest:.2f})")
 
+    input("Press enter to exit")
+
+
 
 main()
