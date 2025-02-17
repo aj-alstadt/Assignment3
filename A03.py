@@ -26,12 +26,14 @@ def main():
     more = "y"
 
 
-    while more == "y":
+    while more.lower() == "y":
 
-        title = input("\nPlease enter the name of a game, or type 'done' to finish: ")
+        title = input("\nPlease enter the name of a game: ")
+
+        score = float(input("\nPlease rate the game from 1.00-10.00: "))
+
+        #Store input in lists
         titles.append(title)
-
-        score = input("\nPlease rate the game from 1.00-10.00: ")
         scores.append(score)
 
         more = input("Would you like to enter another title? (Y/N): ")
@@ -42,6 +44,8 @@ def main():
        totals += scores[i]
 
     average = totals / len(scores)
+
+    print(titles, scores, average )
 
 
 
